@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 
 public class MouseController : MonoBehaviour
@@ -9,6 +11,11 @@ public class MouseController : MonoBehaviour
     public Camera mainCam;
     public GameObject SelectedItem;
 
+    private void Update()
+    {
+        
+    }
+
 
     private void CollisionCheck(InputAction.CallbackContext context)
     {
@@ -16,6 +23,8 @@ public class MouseController : MonoBehaviour
         bool isOverUi = UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
         if (isOverUi)
         {
+            
+            Debug.Log("Clicked on UI");
             return;
         }
         RaycastHit2D rayHit;
@@ -43,4 +52,5 @@ public class MouseController : MonoBehaviour
     {
         select.action.started -= CollisionCheck;
     }
+
 }

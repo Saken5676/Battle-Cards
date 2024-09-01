@@ -13,10 +13,10 @@ public class CameraManager : MonoBehaviour
 
     //Camera Zoom Variables
     private float zoom;
-    private float zoomMultiplier = 4f;
-    private float minZoom = 4f;
-    private float maxZoom = 8f;
-    private float velocity = 0f;
+    private float zoomMultiplier = 4.0f;
+    private float minZoom = 4.0f;
+    private float maxZoom = 8.0f;
+    private float velocity = 0.0f;
     private float smoothTime = .25f;
     public _GridManager gridManager;
   
@@ -26,6 +26,7 @@ public class CameraManager : MonoBehaviour
     private void Start()
     {
         zoom = mainCam.orthographicSize;
+        
     }
 
     private void Update()
