@@ -7,9 +7,7 @@ public class MouseController : MonoBehaviour
 {
     public InputActionReference select;
     public Camera mainCam;
-
-    public event Action ObjectSelected;
-
+    public GameObject SelectedItem;
 
 
     private void CollisionCheck(InputAction.CallbackContext context)
@@ -28,8 +26,8 @@ public class MouseController : MonoBehaviour
         }
         else
         {
-            SelectedItem.Instance.selectedGameObject = rayHit.collider.gameObject;
-            ObjectSelected?.Invoke();
+            SelectedItem = rayHit.collider.gameObject;
+            EventManager.instance.ItemSelected();
         }
     }
 

@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: fdeae8cc069ef8b4eac6823f97b33e0c
+guid: d7a223296b3e0fe44b31260f3d4e1f6f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - tilePrefab: {fileID: 9036933219174474867, guid: 75cd6368d11b9f749a899c97a69d2338, type: 3}
-  - cam: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

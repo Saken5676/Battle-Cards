@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class CameraController : MonoBehaviour
+public class CameraManager : MonoBehaviour
 {
     [SerializeField] private Camera mainCam;
 
@@ -18,6 +18,7 @@ public class CameraController : MonoBehaviour
     private float maxZoom = 8f;
     private float velocity = 0f;
     private float smoothTime = .25f;
+    public _GridManager gridManager;
   
     //Camera Pan Variables
     private Vector3 mouseWorldPosStart;
@@ -49,10 +50,11 @@ public class CameraController : MonoBehaviour
     }
 
     //Sets Camera to center of generated grid
-    public void SetCamera(int width, int height)
+    public void SetCamera()
     {
-        mainCam.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10f);
+        mainCam.transform.position = new Vector3((float)gridManager.width / 2 - 0.5f, (float)gridManager.height / 2 - 0.5f, -10f);
     }
+
 
 
     private void PanCamera()
@@ -65,4 +67,25 @@ public class CameraController : MonoBehaviour
         }
 
     }
+
+
+
+
+
+
+
+    //==================================================
+    //Event subscriptions
+    private void OnEnable()
+    {
+        EventManager.instance.OnGridSpawnComplete += SetCamera;
+    }
+
+
+
+    private void OnDisable()
+    {
+        EventManager.instance.OnGridSpawnComplete += SetCamera;
+    }
+
 }

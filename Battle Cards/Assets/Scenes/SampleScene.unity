@@ -617,7 +617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &330436825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,7 +633,6 @@ MonoBehaviour:
   width: 10
   height: 10
   tilePrefab: {fileID: 9036933219174474867, guid: 75cd6368d11b9f749a899c97a69d2338, type: 3}
-  cameraController: {fileID: 519420033}
 --- !u!4 &330436826
 Transform:
   m_ObjectHideFlags: 0
@@ -1371,6 +1370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 519420031}
+  gridManager: {fileID: 330436825}
 --- !u!1 &528481683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,6 +2155,7 @@ GameObject:
   - component: {fileID: 852378426}
   - component: {fileID: 852378425}
   - component: {fileID: 852378427}
+  - component: {fileID: 852378428}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -2234,6 +2235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   select: {fileID: 3759128520024669738, guid: 20ccd06499503db419c568f71b311749, type: 3}
   mainCam: {fileID: 519420031}
+  SelectedItem: {fileID: 0}
 --- !u!114 &852378427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2246,8 +2248,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d684d85e89c15c48899a39ebc172f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedGameObject: {fileID: 0}
   mouseController: {fileID: 852378426}
+  selectedGameObject: {fileID: 0}
+--- !u!114 &852378428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852378422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a223296b3e0fe44b31260f3d4e1f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &900498136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3124,7 +3138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1654708876
 MonoBehaviour:
   m_ObjectHideFlags: 0

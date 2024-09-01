@@ -15,5 +15,6 @@ public class TileSpawner : MonoBehaviour
                 spawnedTile.name = $"Tile {x},{y}";
             }
         }
+        
     }
 }
